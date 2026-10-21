@@ -76,8 +76,9 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 2. Running the PipelineTo run data preparation, feature engineering, and model training:python -m src.data_pipeline
 python -m src.models.classifiers
+'''
 
-## 📂Repository Blueprint
+## 📂 Repository Blueprint
 ```text
 aqi-forecasting-pipeline/
 
