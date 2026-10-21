@@ -76,5 +76,81 @@ source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 2. Running the PipelineTo run data preparation, feature engineering, and model training:python -m src.data_pipeline
 python -m src.models.classifiers
+
+## 📂Repository Blueprint
+```text
+aqi-forecasting-pipeline/
+
+│
+
+├── data/
+
+│   ├── raw/
+
+│   │   └── aqi_raw_sensor_data.csv
+
+│   └── processed/
+
+│       └── aqi_engineered_features.csv
+
+│
+
+├── notebooks/
+
+│   ├── 01_eda_and_decomposition.ipynb
+
+│   ├── 02_feature_engineering.ipynb
+
+│   ├── 03_classification_ensembles.ipynb
+
+│   └── 04_prophet_forecasting.ipynb
+
+│
+
+├── src/
+
+│   ├── __init__.py
+
+│   ├── data_pipeline.py
+
+│   ├── models/
+
+│   │   ├── __init__.py
+
+│   │   ├── classifiers.py
+
+│   │   ├── regressors.py
+
+│   │   └── forecaster.py
+
+│   └── utils/
+
+│       ├── __init__.py
+
+│       ├── metrics.py
+
+│       └── visualization.py
+
+│
+
+├── reports/
+
+│   └── figures/
+
+│       ├── class_distribution.png
+
+│       ├── yearly_trends_2015_2023.png
+
+│       └── prophet_decomposition.png
+
+│
+
+├── .gitignore
+
+├── LICENSE
+
+├── README.md
+
+└── requirements.txt
 python -m src.models.forecaster
 LicenseDistributed under the MIT License. See LICENSE for more information.
